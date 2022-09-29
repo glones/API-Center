@@ -1,0 +1,31 @@
+micronaut:
+  application:
+    name: apiCenter
+  metrics:
+    enabled: true
+  router:
+    static-resources:
+      default:
+        enabled: true
+        mapping: "/public/**"
+        paths: "classpath:public"
+
+netty:
+  default:
+    allocator:
+      max-order: 3
+
+datasources:
+  default:
+    url: ${JDBC_URL:`jdbc:hsqldb:mem:testdb;DB_CLOSE_DELAY=-1`}
+    username: ${JDBC_USER:sa}
+    password: ${JDBC_PASSWORD:""}
+    driverClassName: ${JDBC_DRIVER:org.hsqldb.jdbc.JDBCDriver}
+
+jpa:
+  default:
+    properties:
+      hibernate:
+        hbm2ddl:
+          auto: update
+        show_sql: true

@@ -1,0 +1,39 @@
+body {
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  gap: 50px;
+  flex-wrap: wrap;
+
+  min-height: 100vh;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+a {
+  height: 70px;
+  width: 200px;
+  box-sizing: border-box;
+
+  text-align: center;
+  line-height: 70px;
+  font-size: 20px;
+
+  background-color: rgb(118, 79, 163);
+  border: 1px solid rgb(118, 79, 163);
+  border-radius: 4px;
+
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+
+  transition: background-color 0.3ms;
+}
+
+a:hover {
+  background-color: rgb(100, 58, 140);
+}
